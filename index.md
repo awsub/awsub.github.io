@@ -1,6 +1,5 @@
 ---
-layout: index
-title: awsub - CLI tool as an ExTL engine
+layout: default
 ---
 
 # What is awsub?

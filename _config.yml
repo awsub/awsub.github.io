@@ -1,17 +1,18 @@
 # Site
 title: awsub
 description: Command line tool to run a batch jobs with ETL framework on AWS or other cloud computing resources.
-version: 0.3.0
-github:
-    repo: https://github.com/otiai10/awsub
 
 # Meta
 author:
     name: 'Hiromu OCHIAI (otiai10)'
     url: https://otiai10.github.io
+github:
+    is_project_page: true
+    repository_url: https://github.com/otiai10/awsub
+    repository_name: awsub
+    owner_name: otiai10
+    owner_url: https://github.com/otiai10
 
 # Build
 markdown: kramdown
-theme: jekyll-theme-hydeout
-remote_theme: fongandrew/hydeout
-sidebar_link: true
+theme: jekyll-theme-architect
