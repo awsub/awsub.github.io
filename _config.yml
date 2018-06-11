@@ -1,6 +1,6 @@
 # Site
 title: awsub
-description: Command line tool to run a batch jobs with ETL framework on AWS or other cloud computing resources.
+description: CLI tool to run a batch jobs with ETL/ExTL framework on AWS or other cloud services.
 
 # Meta
 author:
