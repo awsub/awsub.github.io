@@ -13,4 +13,5 @@ author:
 # Build
 markdown: kramdown
 theme: jekyll-theme-hydeout
+remote_theme: fongandrew/hydeout
 sidebar_link: true
