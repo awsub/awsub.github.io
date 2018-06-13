@@ -39,7 +39,7 @@ a {
   text-decoration:none;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, a.active {
   color:#069;
   font-weight: bold;
 }
