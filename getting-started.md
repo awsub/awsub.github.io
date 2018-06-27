@@ -39,3 +39,5 @@ Otherwise, you need to install `awscli` and configure it with your credentials.
 - **and** [Configuring the AWS CLI - AWS Command Line Interface ](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html){:target="_blank"}
 
 # 1. Install awsub
+
+{% include note.html type="info" content="`awsub` is currently stable on MacOS and Linux environment. Windows support is coming soon." %}
