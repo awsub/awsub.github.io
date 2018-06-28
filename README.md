@@ -1,0 +1,6 @@
+# Development
+
+```
+bundle install
+rake
+```
