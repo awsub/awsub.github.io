@@ -3,6 +3,11 @@ div.alert {
   padding:      15px;
   border-radius: 4px;
 }
+div.alert.alert-success {
+  background-color: #dff0d8;
+  border-color:     #d0e9c6;
+  color:            #3c763d;
+}
 div.alert.alert-info {
   background-color: #d9edf7;
   border-color:     #bce8f1;
