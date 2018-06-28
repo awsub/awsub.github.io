@@ -4,16 +4,4 @@ title: ETL and ExTL
 permalink: /etl-and-extl
 ---
 
-> This page describes what ETL and ExTL are.
-
-# What is ETL?
-
-**ETL** is one of data processing workflow model, which is oftenly used for analysing huge market data.
-
-# Problems of ETL
-
-bla bla
-
-# ExTL: extended ETL
-
-bla bla
+{% include note.html type="warning" content="This page is under construcion, please check [this document](https://github.com/awsub/lab/blob/master/publications/2018-06-28_GCCBOSC/LT-bosc2018.pdf) instead." %}
