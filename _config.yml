@@ -1,5 +1,5 @@
 # Site
-title: awsub
+title: hotsub
 description: CLI tool to run a batch jobs with ETL/ExTL framework on AWS or other cloud services.
 
 # Meta
@@ -8,9 +8,9 @@ author:
     url: https://otiai10.github.io
 github:
     is_project_page: true
-    repository_url: https://github.com/otiai10/awsub
-    repository_name: awsub
-    repository_nwo: github.com/otiai10/awsub
+    repository_url: https://github.com/otiai10/hotsub
+    repository_name: hotsub
+    repository_nwo: github.com/otiai10/hotsub
     owner_name: otiai10
     owner_url: https://github.com/otiai10
 
