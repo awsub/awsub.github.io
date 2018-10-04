@@ -15,6 +15,7 @@ This command will automatically launch several EC2 instances on AWS and execute 
 
 More details about what it does are explained in this page. Please check it out.
 
+-> [Getting Started](/getting-started)<br>
 -> [How it works](/how-it-works)
 
 # Why hotsub?
