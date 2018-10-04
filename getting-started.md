@@ -9,11 +9,19 @@ page_index: -1
 
 # 0. Prerequisites
 
-- [docker-machine](#docker-machine)
-- [AWS CLI](#aws-cli)
-- [gcloud](https://cloud.google.com/sdk/install){:target="_blank"}, if you want to try `hotsub` on GCP
+You need 2 softwares install on your environment
 
-## docker-machine
+- [docker-machine](#install-docker-machine)
+- [AWS CLI](#install-aws-cli)
+
+and 2 permissions on AWS account
+
+- [EC2 Full Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_ec2_region.html) // TODO: fix
+- [IAM Full Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) // TODO: fix
+
+{% include note.html type="info" content="These 2 permissions are **sufficient condition**. Check ['Support HIPAA'](/support-hipaa) for more detail." %}
+
+## Install docker-machine
 
 You can skip this step if following command already works well on your computer.
 
@@ -26,7 +34,7 @@ Otherwise, you need to install `docker-machine`.
 - [Install Docker Machine - Docker Documentation](https://docs.docker.com/machine/install-machine/){:target="_blank"}
 - **or** [Docker Toolbox overview - Docker Documentation](https://docs.docker.com/toolbox/overview)
 
-## AWS CLI
+## Install AWS CLI
 
 You can skip this step if following command already works well on your computer.
 
