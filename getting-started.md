@@ -55,11 +55,47 @@ Choose binary for your OS from [this release page](https://github.com/otiai10/ho
 
 # 2. Hello World!
 
+You can generate `Hello, World` project by using `template` command.
+
 ```sh
-./hotsub \
+% hotsub template
+Successfully created template project
+    at helloworld_201810041451
+Go to the directory and check README.md
+% cd helloworld_201810041451
+% ls
+README.md	hello.csv	hello.sh
+```
+
+These are all you need to run `Hello, World`
+
+```sh
+% hotsub run \
     --script hello.sh \
-    --tasks world.csv \
-    -v
+    --tasks hello.csv \
+    --verbose
+```
+
+Then you will get following output
+
+```
+2018/10/04 14:53:46 [COMMAND]	Your tasks file is parsed and decoded to 2 job(s) ✅
+2018/10/04 14:53:46 [COMMAND]	See logs here -> /Users/otiai10/proj/hotsub/github.io/helloworld_201810041451/log/20181004_145346
+[hello.csv 0]	[CREATE]	Creating computing instance for this job...
+[hello.csv 1]	[CREATE]	Creating computing instance for this job...
+[hello.csv 1]	[CONSTRUCT]	Constructing containers for this job...
+[hello.csv 1]	[CONSTRUCT]	Constructing workflow container inside the computing instance...
+[hello.csv 1]	[CONSTRUCT]	Constructing routine container inside the computing instance...
+[hello.csv 0]	[CONSTRUCT]	Constructing containers for this job...
+[hello.csv 0]	[CONSTRUCT]	Constructing workflow container inside the computing instance...
+[hello.csv 0]	[CONSTRUCT]	Constructing routine container inside the computing instance...
+[hello.csv 0]	[EXECUTE]	&1> Hello! My name is Tom.
+[hello.csv 0]	[EXECUTE]	&1> I'm a cat.
+[hello.csv 1]	[EXECUTE]	&1> Hello! My name is Jerry.
+[hello.csv 1]	[EXECUTE]	&1> I'm a mouse.
+[hello.csv 0]	[DESTROY]	Terminating computing instance for this job...
+[hello.csv 1]	[DESTROY]	Terminating computing instance for this job...
+2018/10/04 15:00:03 [COMMAND]	All of your 2 job(s) are completed 🎉
 ```
 
 `hello.sh` and `world.csv` are [like this](https://gist.github.com/otiai10/4dd9214d01ec933cb98204e426bf2c44){:target="_blank"}. You can just download these files to try.
