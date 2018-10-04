@@ -2,7 +2,7 @@
 layout: default
 title: Getting Started
 permalink: /getting-started
-page_index: -1
+page_index: 0
 ---
 
 > This page describes how to get started with `hotsub` command. 
@@ -98,14 +98,8 @@ Then you will get following output
 2018/10/04 15:00:03 [COMMAND]	All of your 2 job(s) are completed 🎉
 ```
 
-`hello.sh` and `world.csv` are [like this](https://gist.github.com/otiai10/4dd9214d01ec933cb98204e426bf2c44){:target="_blank"}. You can just download these files to try.
+Congrats! You first jobs are completed.
 
-When it works well, it will show you output like this
+Let's follow what happened in this trial.
 
-![](assets/img/hotsub-helloworld.png)
-
-Let's read the log of this "Hello, World".
-
-First, you can see your task file (`csv`) is parsed as 2 tasks, because it has 2 rows except for the header row, and the log folder specified.
-
-After that, each color represents each VM's lifecycle. It `CREATE` each VM, `CONSTRUCT` containers in it, `EXECUTE` the shell script you specified, and finally it `DESTROY` so that nothing remains after your jobs get done.
+-> [How it works](/how-it-works)
