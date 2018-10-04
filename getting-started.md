@@ -2,6 +2,7 @@
 layout: default
 title: Getting Started
 permalink: /getting-started
+page_index: -1
 ---
 
 > This page describes how to get started with `hotsub` command. 

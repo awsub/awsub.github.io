@@ -1,9 +1,10 @@
 
 <ul class="page-links">
-  <li>
+  <!-- <li>
     <a class="{% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">Top</a>
-  </li>
-  {% for node in site.pages %}
+  </li> -->
+  {% assign pages = site.pages | sort:"page_index" %}
+  {% for node in pages %}
     {% if node.title and node.permalink and node.permalink != '/' %}
       <li>
         <a class="{% if node.permalink == page.url %}active{% endif %}" href={{ node.permalink || node.url }}>{{ node.title }}</a>
