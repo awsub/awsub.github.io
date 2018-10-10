@@ -11,7 +11,11 @@ permalink: /
 hotsub --script ./hello.sh --tasks ./world.csv
 ```
 
+![Example 001](/assets/img/example-001.png)
+
 This command will automatically launch several EC2 instances on AWS and execute your `./hello.sh` on the instances for each sample which is specified as a row in your `./world.csv`.
+
+![Example Animation](/assets/img/example-animated.gif)
 
 More details about what it does are explained in this page. Please check it out.
 
