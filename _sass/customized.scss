@@ -2,3 +2,9 @@
 details>summary {
   margin-bottom: 16px;
 }
+
+ul.page-links {
+  ol {
+    margin: 0;
+  }
+}
