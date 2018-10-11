@@ -26,7 +26,7 @@ More details about what it does are explained in this page. Please check it out.
 
 `hotsub` doesn't require any new knowledge to get started with. Only you need is shell script file you want to execute.
 
-Launching VMs on cloud, provisionong, download and uploading files to storage are all automated by `hotsub`.
+Launching VMs on cloud, provisionong, downloading and uploading files to storage are all automated by `hotsub`.
 
 There are more differences with other existing tools, check this page for more details.
 
