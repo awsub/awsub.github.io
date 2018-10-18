@@ -36,6 +36,8 @@ Basic lifecycle of `hotsub` execution is constructed by following steps.
 6. `[PUSH]`[*](#push): uploading output files to the URL specified in `tasks` CSV file
 6. `[DESTROY]`[*](#destroy): terminating VM instances no longer used
 
+![sequence](/assets/img/sequence.png)
+
 # [CREATE]
 
 `[CREATE]` step creates VM instances on cloud services, which is specified with `--provider` option (`aws` by default).
