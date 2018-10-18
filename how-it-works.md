@@ -51,16 +51,12 @@ this CSV will create **2 VM instances** because 2 samples are specified exceptin
 
 {% include note.html type="info" content="`hotsub` uses [`docker-machine`](https://docs.docker.com/machine/) for `[CREATE]` step, this is why you need to install `docker-machine` as one of prerequisites." %}
 
-<br>
-
 # [CONSTRUCT]
 
 After creating VM instances, `[CONSTRUCT]` step sets up Docker containers inside the VMs.
 By using separated Docker containers inside 1 VM instance, `hotsub` enables to run ****any script**** on VM instances ****without caring**** about neither downloading input files nor uploading output files.
 
 ![Containers Architecture](https://raw.githubusercontent.com/hotsub/lab/master/publications/2018-06-28_GCCBOSC/images/container-architecture.png)
-
-<br>
 
 # [FETCH]
 
@@ -78,8 +74,6 @@ As described before `[CREATE]` step creates 2 VM instances for `case_XXX` and `c
 
 **The file locations can be accessed as env variables represented by column names**, e.g. env var `$BAMFILE` specifies the location of downloaded `sorted.bam` in each VM.
 
-<br>
-
 # [EXECUTE]
 
 Thus your script given with `--script` does not need to care about downloading input files and can just access those files with environment variables, like this
@@ -95,8 +89,6 @@ bwa mem \
 ```
 
 The only thing this script should care about is **to place output files at directory specified with `--output-recursive`**, all the files placed that directory are going to be uploaded by the next step: `[PUSH]`
-
-<br>
 
 # [PUSH]
 

@@ -8,3 +8,9 @@ ul.page-links {
     margin: 0;
   }
 }
+
+section {
+  &>h1:not(:first-of-type) {
+    margin-top: 60px;
+  }
+}
