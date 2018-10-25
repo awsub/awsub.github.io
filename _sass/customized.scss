@@ -14,3 +14,21 @@ section {
     margin-top: 60px;
   }
 }
+
+div.view-on-github {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.2em;
+  height: 60px;
+
+  div {
+    padding-left: 12px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    height: 60px;
+  }
+}

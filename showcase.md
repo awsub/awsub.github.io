@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Examples Showcase
+title: Recipe Showcase
 permalink: /showcase
 page_index: 2
 sublinks:
@@ -8,33 +8,88 @@ sublinks:
     link: bwa-alignment
   - title: STAR alignment
     link: star-alignment
+  - title: GDC download
+    link: gdc-download
 ---
 
 > Here describes commonly-used examples as showcase.
 
 # BWA alignment
 
+This recipe runs **[BWA alignment](https://github.com/lh3/bwa)** on AWS EC2 instances, without configuring instances.
+
 ```sh
-% hotsub run \
-    --tasks ./bwa-alignment.csv \
+hotsub run \
     --script ./main.sh \
-    --image otiai10/bwa \
+    --image hotsub/bwa-alignment \
+    --tasks ./bwa-alignment.csv \
     --aws-ec2-instance-type t2.large \
     --verbose
 ```
 
-For more details: [https://github.com/otiai10/hotsub/tree/master/examples/BWA](https://github.com/otiai10/hotsub/tree/master/examples/BWA)
+This command will
+
+- execute workflow described as **main.sh**
+- inside docker runtime of image **hotsub/bwa-alignment**
+- for each sample in **bwa-alignment.csv**
+- on EC2 instances with type **t2.large**
+
+All the resources are automatically cleaned up after output files are located back to S3.
+
+{% include view-on-github.html href="https://github.com/hotsub/showcase/tree/master/BWA-Alignment" %}
 
 # STAR alignment
 
+This recipe runs **[STAR RNA-seq alignment](https://github.com/alexdobin/STAR)** on AWS EC2 instances, without configuring instances.
+
 ```sh
 hotsub run \
-  --tasks ./star-alignment.csv \
   --script ./main.sh \
   --image friend1ws/star-alignment \
+  --tasks ./star-alignment.csv \
   --aws-ec2-instance-type m4.2xlarge \
   --disk-size 128 \
+  --shared REFERENCE=s3://hotsub/resources/reference/GRCh37.STAR-2.5.2a \
   --verbose
 ```
 
-For more details [https://github.com/otiai10/hotsub/tree/master/examples/STAR](https://github.com/otiai10/hotsub/tree/master/examples/STAR)
+This command will
+
+- execute workflow described as **main.sh**
+- inside docker runtime of image **friend1ws/star-alignment**
+- for each sample in **star-alignment.csv**
+- on EC2 instances with type **m4.2xlarge**
+- which have **128** GB disk size
+- and reference files are located on shared data instance to reduce inefficient network traffic and instance times
+
+All the resources are automatically cleaned up after output files are located back to S3.
+
+{% include view-on-github.html href="https://github.com/hotsub/showcase/tree/master/STAR-Alignment" %}
+
+# GDC Download
+
+This recipe downloads common data from **[NCI Genomic Data Commons](https://gdc.cancer.gov/)** and convert BAM files to Fastq files.
+
+```sh
+hotsub run \
+  --script ./main.sh \
+  --image hotsub/gdc-client \
+  --tasks ./MCF7-fastq.csv \
+  --aws-ec2-instance-type m4.2xlarge \
+  --disk-size 64 \
+  -v
+```
+
+This command will
+
+- execute workflow described as **`main.sh`**
+- inside docker runtime of image **`hotsub/gdc-client`**
+- for each sample in **`MCF7-fastq.csv`**
+- on EC2 instances with type **`m4.2xlarge`**
+- which have **`64`** GB disk size
+
+All the resources are automatically cleaned up after output files are located back to S3.
+
+{% include view-on-github.html href="https://github.com/hotsub/showcase/tree/master/GDC-Downloader" %}
+
+----
