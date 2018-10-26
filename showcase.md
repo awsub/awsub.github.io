@@ -93,3 +93,5 @@ All the resources are automatically cleaned up after output files are located ba
 {% include view-on-github.html href="https://github.com/hotsub/showcase/tree/master/GDC-Downloader" %}
 
 ----
+
+If you have any working **hotsub** recipe, please [let us know](https://github.com/hotsub/showcase/issues/new) and add it here ;)
