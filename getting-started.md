@@ -9,7 +9,7 @@ page_index: 0
 
 # 0. Prerequisites
 
-You need 2 softwares install on your environment
+You need 2 softwares installed on your environment
 
 - [docker-machine](#install-docker-machine)
 - [AWS CLI](#install-aws-cli)
